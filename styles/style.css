@@ -144,6 +144,13 @@ header input:last-child {
 	background: #eee;
 }
 
+.search-results {
+	padding-left: 140px;
+}
+.search-results > p {
+	color: #777;
+	font-size: 0.8rem;
+}
 
 footer {
 	display: table;
