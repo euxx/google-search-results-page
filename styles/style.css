@@ -1,9 +1,13 @@
 
+/*
+browser-sync start --server --files "**/*.css, **/*.html"
+browser-sync start --server --files "**"
+*/
+
+
 html {
 	box-sizing: border-box;
 	height: 100%;
-	padding: 0;
-	margin: 0;
 }
 
 *,
@@ -25,11 +29,10 @@ html {
 }
 
 body {
-	font: 13px arial, sans-serif;
-	min-width: 1350px;
+	font: 16px arial, sans-serif;
+	min-width: 1060px;
 	width: 100%;
 	height: 100%;
-	padding: 0;
 	margin: 0;
 }
 
@@ -37,62 +40,51 @@ body {
 	display: table;
 	width: 100%;
 	height: 100%;
+	vertical-align: middle;
 }
 .box {
-	display: table-cell;
+	display: table-row;
 	width: 100%;
 }
+
 header {
-	display: table-header-group;
+	display: table;
+	table-layout: fixed;
 	width: 100%;
 	height: 1px;
-	background: #eee;
+	background: #f2f2f2;
 }
 .cell {
 	display: table-cell;
 }
 .cell1 {
 	width: 100px;
-}
-.cell2 {
-	width:600px;
-}
-.cell3 {
-	width: 100px;
-}
-header img {
-	height: 40px;
-}
-footer {
-	display: table-footer-group;
-	width: 100%;
-	height: 1px;
-	background: #f2f2f2;
-}
-
-ul,
-ul li {
-	display: inline-block;
-}
-li a:hover {
-	color: #222;
-}
-header a,
-footer a,
-.search-nav a {
-	text-decoration: none;
-	color: #444;
-}
-footer a {
+	padding-left: 15px;
 	padding-right: 20px;
 }
-
-
+.cell2 {
+	width: 660px;
+	padding: 10px 0;
+}
+.cell3 {
+	text-align: right;
+}
+header img {
+	height: 32px;
+	vertical-align: middle;
+}
+header input:last-child {
+	padding: 11px 15px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
 .search-box {
-	width: 500px;
+	width: 570px;
 	height: 35px;
 	border: 1px solid #ddd;
 	border-radius: 1px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 	padding-left: 8px;
 }
 .search-box:hover {
@@ -104,11 +96,53 @@ footer a {
 }
 .sign-in {
 	margin-right: 30px;
+	border: none;
 	border-radius: 2px;
 	padding: 7px 12px;
 	background: #4685F0;
+	font-size: 0.8rem;
 	color: white;
 	font-weight: 700;
+}
+
+.search-nav li {
+	padding: 0 10px;
+}
+.sub-nav ul {
+	display: none;
+}
+.sub-nav li {
+	display: block;
+}
+.sub-nav:hover ul {
+	display: block;
+}
+
+
+footer {
+	display: table;
+	width: 100%;
+	height: 1px;
+	background: #f2f2f2;
+}
+footer ul {
+	margin-left: 50px;
+}
+footer li {
+	padding: 0 20px;
+}
+
+ul li {
+	display: inline-block;
+}
+li a:hover {
+	color: #222;
+}
+footer a,
+.search-nav a {
+	text-decoration: none;
+	color: #666;
+	font-size: 0.85rem;
 }
 
 .right {
