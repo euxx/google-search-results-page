@@ -42,10 +42,6 @@ body {
 	height: 100%;
 	vertical-align: middle;
 }
-.box {
-	display: table-row;
-	width: 100%;
-}
 
 header {
 	display: table;
@@ -105,17 +101,47 @@ header input:last-child {
 	font-weight: 700;
 }
 
-.search-nav li {
-	padding: 0 10px;
+.search-nav {
+	border-bottom: 1px solid #ddd;
+}
+.search-nav > ul {
+	padding-left: 130px;
+	margin-bottom: 0;
+}
+.search-nav ul > li {
+	padding: 5px 10px;
+	padding-bottom: 15px;
+	position: relative;
+}
+.search-nav > ul > li:first-child a {
+	color: #4685F0;
+	font-weight: 600;
+}
+.search-nav > ul > li:first-child {
+	border-bottom: 3px solid #4685F0;
 }
 .sub-nav ul {
 	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #fff;
+	width: 70px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	padding: 0;
 }
 .sub-nav li {
 	display: block;
+
 }
+
 .sub-nav:hover ul {
 	display: block;
+}
+.sub-nav:hover li:hover,
+.search-nav ul > li:last-child:hover {
+	background: #eee;
 }
 
 
@@ -125,6 +151,7 @@ footer {
 	height: 1px;
 	background: #f2f2f2;
 }
+
 footer ul {
 	margin-left: 50px;
 }
